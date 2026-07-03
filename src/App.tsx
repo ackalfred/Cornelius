@@ -44,7 +44,7 @@ export default function App() {
   return (
     <ThemeProvider>
       <HelmetProvider>
-        <Router>
+        <Router basename={import.meta.env.BASE_URL}>
           <Helmet>
             <title>Agbemabiase Cornelius | Software Engineer & Tech Leader</title>
             <meta name="description" content="Portfolio of Agbemabiase Alfred Kofi Cornelius - Software Engineer, Youth Development Practitioner, Database Administrator, and Founder of Tech Dome Academy based in Accra, Ghana." />
