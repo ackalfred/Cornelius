@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: initial; /* Lenis handles smooth scroll */
+    @apply select-none;
+  }
+
+  body {
+    @apply overflow-x-hidden antialiased font-sans transition-colors duration-300;
+  }
+
+  /* Custom Selection Color */
+  ::selection {
+    @apply bg-accent-cyan/30 text-[#00F2FE] dark:bg-accent-cyan/20;
+  }
+}
+
+@layer utilities {
+  /* Premium Glassmorphic Card */
+  .glass-card {
+    @apply bg-white/70 dark:bg-dark-card/50 backdrop-blur-xl border border-white/10 dark:border-dark-border/40 shadow-xl;
+  }
+
+  .glass-card-hover {
+    @apply hover:shadow-2xl hover:border-accent-cyan/30 dark:hover:border-accent-cyan/25 hover:-translate-y-1 transition-all duration-300;
+  }
+
+  /* Premium Glassmorphic Navbar */
+  .glass-nav {
+    @apply bg-white/70 dark:bg-dark-bg/60 backdrop-blur-md border-b border-slate-200/50 dark:border-dark-border/40;
+  }
+
+  /* Text Gradient styles */
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-accent-blue to-accent-cyan;
+  }
+
+  .text-gradient-gold {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#FFD700] to-[#FFA500];
+  }
+
+  .text-gradient-orange {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-accent-orange to-[#FF5E62];
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-slate-100 dark:bg-dark-bg;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 dark:bg-[#1E293B] rounded-full hover:bg-slate-400 dark:hover:bg-[#334155] transition-colors;
+}
+
+/* Lenis scroll styles */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overflow: clip;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Hide standard cursor when custom cursor is active (except on mobile) */
+@media (min-width: 768px) {
+  .custom-cursor-active, 
+  .custom-cursor-active a, 
+  .custom-cursor-active button,
+  .custom-cursor-active input,
+  .custom-cursor-active textarea {
+    cursor: none !important;
+  }
+}
+
+/* Custom animations helper */
+.animate-delay-100 { animation-delay: 100ms; }
+.animate-delay-200 { animation-delay: 200ms; }
+.animate-delay-300 { animation-delay: 300ms; }
+.animate-delay-500 { animation-delay: 500ms; }
