@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { FaGithub, FaLinkedin, FaFacebook, FaInstagram, FaTwitter, FaArrowUp } from 'react-icons/fa';
 import { FiMail } from 'react-icons/fi';
 import { motion } from 'framer-motion';
+import { asset } from '../utils/assets';
 
 export const Footer: React.FC = () => {
   const [visitorCount, setVisitorCount] = useState(1480);
@@ -43,7 +44,7 @@ export const Footer: React.FC = () => {
         <div className="flex flex-col gap-4">
           <h2 className="text-xl font-display font-black text-white flex items-center gap-2.5">
             <div className="w-9 h-9 rounded-full overflow-hidden border border-slate-800 shadow-sm shrink-0">
-              <img src="/logo.jpg" alt="Cornelius Logo" className="w-full h-full object-cover" />
+              <img src={asset('logo.jpg')} alt="Cornelius Logo" className="w-full h-full object-cover" />
             </div>
             <span className="text-white">Cornelius</span>
           </h2>

@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
 import { FiMail, FiArrowDown } from 'react-icons/fi';
 import confetti from 'canvas-confetti';
+import { asset } from '../utils/assets';
 
 const roles = [
   "Software Engineer",
@@ -137,7 +138,7 @@ export const Hero: React.FC = () => {
               View Projects
             </button>
             <a
-              href="/Agbemabiase_Cornelius_CV.pdf"
+              href={asset('Agbemabiase_Cornelius_CV.pdf')}
               download
               onClick={triggerCvConfetti}
               className="w-full sm:w-auto px-8 py-3.5 bg-white dark:bg-dark-card border border-slate-200 dark:border-dark-border hover:bg-slate-50 dark:hover:bg-[#1B2538] text-slate-800 dark:text-slate-200 rounded-xl font-semibold tracking-wide transition-all text-center text-sm shadow-sm"
@@ -183,7 +184,7 @@ export const Hero: React.FC = () => {
             {/* Professional Portrait */}
             <div className="absolute inset-3 rounded-2xl overflow-hidden border border-slate-200 dark:border-dark-border bg-slate-100 dark:bg-dark-card shadow-2xl group cursor-pointer">
               <img
-                src="/CEO.jpeg"
+                src={asset('CEO.jpeg')}
                 alt="Agbemabiase Alfred Kofi Cornelius"
                 className="w-full h-full object-cover object-top grayscale-[20%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
               />

@@ -3,6 +3,7 @@ import { ThemeToggle } from './ThemeToggle';
 import { FiMenu, FiX } from 'react-icons/fi';
 import { motion, AnimatePresence } from 'framer-motion';
 import confetti from 'canvas-confetti';
+import { asset } from '../utils/assets';
 
 export const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -79,7 +80,7 @@ export const Navbar: React.FC = () => {
           className="flex items-center gap-2.5 focus:outline-none group"
         >
           <div className="w-9 h-9 rounded-full overflow-hidden border border-slate-200 dark:border-dark-border group-hover:border-accent-cyan transition-all shadow-sm shrink-0">
-            <img src="/logo.jpg" alt="Cornelius Logo" className="w-full h-full object-cover" />
+            <img src={asset('logo.jpg')} alt="Cornelius Logo" className="w-full h-full object-cover" />
           </div>
           <span className="text-xl font-display font-black text-slate-800 dark:text-white group-hover:text-accent-blue dark:group-hover:text-accent-cyan transition-colors">
             Cornelius
@@ -114,7 +115,7 @@ export const Navbar: React.FC = () => {
         <div className="hidden lg:flex items-center gap-4">
           <ThemeToggle />
           <a
-            href="/Agbemabiase_Cornelius_CV.pdf"
+            href={asset('Agbemabiase_Cornelius_CV.pdf')}
             download
             onClick={triggerCvConfetti}
             className="px-5 py-2.5 bg-gradient-to-r from-accent-blue to-accent-cyan hover:brightness-110 text-white rounded-xl text-sm font-semibold tracking-wider transition-all duration-300 shadow-md hover:shadow-lg hover:shadow-accent-blue/20"
@@ -162,7 +163,7 @@ export const Navbar: React.FC = () => {
               ))}
               <div className="h-[1px] bg-slate-200 dark:bg-dark-border/50 my-2" />
               <a
-                href="/Agbemabiase_Cornelius_CV.pdf"
+                href={asset('Agbemabiase_Cornelius_CV.pdf')}
                 download
                 onClick={triggerCvConfetti}
                 className="w-full text-center py-3 bg-gradient-to-r from-accent-blue to-accent-cyan text-white rounded-xl text-sm font-semibold tracking-wider transition-all duration-300 shadow-md"

@@ -2,6 +2,7 @@ import React from 'react';
 import { FiDownload, FiFileText } from 'react-icons/fi';
 import { motion } from 'framer-motion';
 import confetti from 'canvas-confetti';
+import { asset } from '../utils/assets';
 
 export const Resume: React.FC = () => {
   const triggerCvConfetti = () => {
@@ -59,7 +60,7 @@ export const Resume: React.FC = () => {
             </span>
             
             <a
-              href="/Agbemabiase_Cornelius_CV.pdf"
+              href={asset('Agbemabiase_Cornelius_CV.pdf')}
               download
               onClick={triggerCvConfetti}
               className="flex items-center gap-1.5 px-4 py-2 bg-gradient-to-r from-accent-blue to-accent-cyan hover:brightness-110 text-white rounded-xl text-xs font-bold uppercase tracking-wider transition-all shadow-md"
@@ -75,7 +76,7 @@ export const Resume: React.FC = () => {
             {/* Desktop and Tablet PDF Viewer */}
             <div className="hidden md:block w-full h-[650px]">
               <iframe
-                src="/Agbemabiase_Cornelius_CV.pdf"
+                src={asset('Agbemabiase_Cornelius_CV.pdf')}
                 width="100%"
                 height="100%"
                 title="Agbemabiase Alfred Kofi Cornelius CV"
@@ -96,7 +97,7 @@ export const Resume: React.FC = () => {
               </p>
               <div className="flex flex-col gap-3 w-full">
                 <a
-                  href="/Agbemabiase_Cornelius_CV.pdf"
+                  href={asset('Agbemabiase_Cornelius_CV.pdf')}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full py-3 bg-gradient-to-r from-accent-blue to-accent-cyan text-white font-bold rounded-xl text-sm shadow-md flex items-center justify-center gap-2"
@@ -105,7 +106,7 @@ export const Resume: React.FC = () => {
                   View CV in New Tab
                 </a>
                 <a
-                  href="/Agbemabiase_Cornelius_CV.pdf"
+                  href={asset('Agbemabiase_Cornelius_CV.pdf')}
                   download
                   onClick={triggerCvConfetti}
                   className="w-full py-3 bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 font-bold rounded-xl text-sm transition-colors flex items-center justify-center gap-2"
